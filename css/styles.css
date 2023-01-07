@@ -36,7 +36,7 @@ p,
 ul,
 li {
     margin: 0px;
-    padding: 0;
+    padding: 0px;
 }
 
 /* кнопки, зсилки */
@@ -182,9 +182,11 @@ header {
     margin-left: auto;
 }
 @media screen and (min-width:480px) and (max-width:768px) {
-    .auth-div {padding-top: 24px;   }
+    .auth-div {padding-top: 12px;   }    
 }
-
+@media screen and (min-width:480px) and (max-width:768px){
+     .auth-nav>li+li { margin-top: 4px; }
+}
 .auth-nav {
     font-size: 12px;
     line-height: 1.33;
@@ -233,6 +235,12 @@ header {
         max-width: 318px;
         font-size: 36px;}
 }
+@media screen and (min-width: 480px){
+    .hero-title {
+        max-width: 496px;
+        font-size: 56px;        }
+}
+
 .section-hero {
     margin-left: auto;
     margin-right: auto;
@@ -303,9 +311,26 @@ header {
     line-height: 1.11;
     text-align: center;
 }
-.sec-workmeth-ul > li:not(:first-child) {
-    margin-top: 72px;
+
+@media screen and (max-width: 479px) {
+    .sec-workmeth-ul>li:not(:first-child)  {
+        margin-top: 72px;    }
 }
+@media screen and (min-width: 480px) and (max-width: 767px){
+    .sec-workmeth-ul {
+        display: flex;
+        flex-wrap: wrap; 
+        row-gap: 72px;
+        column-gap: 24px;  
+             }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .sec-workmeth-ul > li {
+        width: calc((100% - 24px)/2);            }
+}
+
+
+
 .text {
     font-size: 16px;
     line-height: 1.5;
