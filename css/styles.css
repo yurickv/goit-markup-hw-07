@@ -308,8 +308,12 @@ header {
     color:  var(--zagolovok);
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.11;
-    text-align: center;
+    line-height: 1.11;    
+}
+
+@media screen and (max-width: 479px) {
+    .section-title-h3 {
+        text-align: center;    }
 }
 
 @media screen and (max-width: 479px) {
@@ -321,14 +325,13 @@ header {
         display: flex;
         flex-wrap: wrap; 
         row-gap: 72px;
-        column-gap: 24px;  
-             }
+        column-gap: 24px;  }
 }
+
 @media screen and (min-width: 480px) and (max-width: 767px) {
     .sec-workmeth-ul > li {
         width: calc((100% - 24px)/2);            }
 }
-
 
 
 .text {
@@ -339,7 +342,7 @@ header {
 }
 
 /* _______________________________section doing metod_________________________ */
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767px) {
     .section-doing {display: none;}
 }
 
@@ -363,18 +366,36 @@ header {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
-    margin-left: auto;
-    margin-right: auto;
+    
 }
 @media screen and (max-width: 479px) {
-    .sec-ourteam-ul {
-        padding-top: 72px;} 
-   
+    .sec-ourteam {margin-left: auto;
+        margin-right: auto; }
 }
+
+.sec-ourteam-ul {
+    padding-top: 72px;
+} 
+   
 @media screen and (max-width: 479px) {
      .sec-ourteam-ul > li:not(:first-child) {
         margin-top: 72px;    }
+
 }
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .sec-ourteam-ul {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 64px;
+        column-gap: 24px;
+        justify-content: center;
+    }
+}
+/* @media screen and (min-width: 480px) and (max-width: 767px){
+    .sec-ourteam { width: calc((100% - 24px)/2);}
+} */
+
 .ourteam-item {
     background-color: #FFFFFF;
     width: 264px;
@@ -431,15 +452,20 @@ header {
 
 /* ______________________________section customers________________________________ */
 
-.customer-list{
+.customer-list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 16px;
     row-gap: 72px;
     justify-content: center;
-
     padding-top: 72px;
 }
+@media screen and (max-width: 479px) {
+    .customer-list { column-gap: 16px;}
+}
+@media screen and (min-width: 480px) {
+    .customer-list { column-gap: 24px;   }
+}
+
 .customer-link {
     display: block;
     border: 1px solid #8E8F99;
@@ -478,10 +504,18 @@ header {
 footer {
     background-color: var(--background);
 }
-
-.footer-div {
-    text-align: center;
+@media screen and (max-width: 479px) {
+    .footer-div {
+     text-align: center;}
 }
+@media screen and (min-width: 480px) {
+    .footer-div { display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 72px;
+    }
+}
+
 .footer-text {
     color: var(--accent);
     font-size: 16px;
@@ -500,9 +534,11 @@ footer {
     font-size: 18px;
     line-height: 1.3;
 }
-.footer-social-item {
-    margin-top: 72px;
+@media screen and (max-width: 479px){
+    .footer-social-item {
+        margin-top: 72px;   }
 }
+
 .social-list.footer {
     margin-top: 16px;
 }
@@ -527,10 +563,11 @@ footer {
     width: 24px;
 }
 
-
-.footer-subscribe-div {
-    margin-top: 72px;
+@media screen and (max-width: 479px){
+    .footer-subscribe-div {
+        margin-top: 72px;   }
 }
+
 @media screen and (max-width: 479px) {
     .footer-button-div {
         margin-top: 16px;
@@ -568,7 +605,7 @@ footer {
     border-radius: 4px;
     background-color: inherit;
     height: 40px;
-    /* min-width: 264px; */
+    min-width: 264px;
     padding: 8px 16px;
     color: #FFFFFF;
     display: block;    
@@ -606,6 +643,12 @@ footer {
         margin-right: auto;
         margin-top: 16px;
     }
+}
+
+@media screen and (min-width: 480px){
+    .footer-button-div {
+        display: flex;
+        gap: 24px;}
 }
 
 /* _________________________________________Modal window _________________________________________*/
