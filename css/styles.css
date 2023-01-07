@@ -64,6 +64,8 @@ li {
     margin-right: auto;
     padding-left: 16px;
     padding-right: 16px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 
@@ -79,12 +81,17 @@ li {
         align-items: center; }
 }
 
-.nav-div {
-    display: none;
+@media screen and (max-width: 479px) { 
+    .nav-div {
+        display: none;} 
 }
-.auth-div {
-    display: none;
+
+@media screen and (max-width: 479px){
+    .auth-div {
+        display: none;
+    }
 }
+
 .logo-web {
     color: var(--brand-color);
 }
@@ -172,4 +179,305 @@ li {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border-color: transparent;
+}
+
+/* ____________________________________work method___________________________ */
+
+.visually-hidden {position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+
+}
+.section-title-h3 {
+    color:  var(--zagolovok);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+}
+.sec-workmeth-ul > li:not(:first-child) {
+    margin-top: 72px;
+}
+.text {
+    font-size: 16px;
+    line-height: 1.5;
+
+    margin-top: var(--margin-top-p);
+}
+
+/* _______________________________section doing metod_________________________ */
+@media screen and (max-width: 479px) {
+    .section-doing {display: none;}
+}
+
+/* _____________________________section section-ourteam_______________________ */
+
+.section-ourteam {
+    background-color: var(--studio);
+    text-align: center;
+}
+
+.section-title {
+    color: var(--zagolovok);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    text-align: center;
+}
+.sec-ourteam {
+    background-color: #FFFFFF;
+    width: 264px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 479px) {
+    .sec-ourteam-ul {
+        padding-top: 72px;} 
+   
+}
+@media screen and (max-width: 479px) {
+     .sec-ourteam-ul > li:not(:first-child) {
+        margin-top: 72px;    }
+}
+.ourteam-item {
+    background-color: #FFFFFF;
+    width: 264px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+    padding: 32px 14px;
+}
+.ourteam-item > h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.social-list {
+    display: flex;
+    gap: var(--margin-left);
+    margin-top: 8px;
+    list-style: none;
+    justify-content: center;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--brand-color);
+    color: var(--studio);
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--hover-color);
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* ______________________________section customers________________________________ */
+
+.customer-list{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 72px;
+    justify-content: center;
+
+    padding-top: 72px;
+}
+.customer-link {
+    display: block;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    width: 168px;
+    height: 88px;
+    background-color: #FFFFFF;
+    color: #8E8F99;
+    padding: 16px 32px;
+
+    transition-property: border-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.customer-link:hover,
+.customer-link:focus {
+    color: var(--hover-color);
+    border-color: 1px solid var(--hover-color);
+
+}
+
+.customer-icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+    fill: currentColor;
+}
+
+/* _______________________________________FOOTER_______________________ */
+
+footer {
+    background-color: var(--background);
+}
+
+.footer-div {
+    text-align: center;
+}
+.footer-text {
+    color: var(--accent);
+    font-size: 16px;
+    line-height: 1.5;
+
+    width: 264px;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo-footer {
+    color: var(--studio);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.3;
+}
+.footer-social-item {
+    margin-top: 72px;
+}
+.social-list.footer {
+    margin-top: 16px;
+}
+
+.soc-link-text,
+.footer-label {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #FFFFFF;
+}
+.social-link.footer {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.social-link.footer:hover,
+.social-link.footer:focus {
+    background-color: #31D0AA;
+    color: var(--studio);
+}
+.social-icon.footer {
+    height: 24px;
+    width: 24px;
+}
+
+
+.footer-subscribe-div {
+    margin-top: 72px;
+}
+@media screen and (max-width: 479px) {
+    .footer-button-div {
+        margin-top: 16px;
+    }
+}
+
+.footer-label {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 16px;
+}
+
+
+
+.footer-svg {
+    width: 24px;
+    height: 20px;
+    margin-left: 16px;
+
+}
+
+.footer-svg>use {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+
+}
+
+.footer-input {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: inherit;
+    height: 40px;
+    /* min-width: 264px; */
+    padding: 8px 16px;
+    color: #FFFFFF;
+    display: block;    
+}
+@media screen and (max-width: 479px) {
+    .footer-input {
+        width: -webkit-fill-available;
+    }
+}
+
+.footer-input::placeholder {
+    font-size: 12px;
+    line-height: 2;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.04em;
+}
+
+.sec-hero-button.footer-button {
+    display: flex;
+    align-items: center;
+
+    padding: 8px 24px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+
+    color: #FFFFFF;
+    margin: 0px;
+    height: 40px;
+   
+}
+@media screen and (max-width: 479px) {
+    .sec-hero-button.footer-button {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 16px;
+    }
 }
