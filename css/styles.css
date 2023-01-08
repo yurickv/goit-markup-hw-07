@@ -996,10 +996,21 @@ textarea::placeholder {
 }
 
 /* _____________________________Portfolio_____________ */
-
+@media screen and (max-width:479px) {
 .portfolio-section .container {
     padding-top: 48px;
-    padding-bottom: 48px;
+    padding-bottom: 48px;}
+}
+@media screen and (min-width:480px) and (max-width:767px) {
+    .portfolio-section .container {
+        padding-top: 64px;
+        padding-bottom: 64px;    }
+}
+
+@media screen and (min-width:768px) {
+    .portfolio-section .container {
+        padding-top: 96px;
+        padding-bottom: 120px;    }
 }
 
 .filtr {
@@ -1064,19 +1075,53 @@ textarea::placeholder {
 .portfolio-progect-card {
     box-sizing: border-box;
 }
-@media screen and (max-width:479px) {
-    .portfolio-works {margin-top: 48px;}
+.portfolio-works {display: flex; 
 }
+
+@media screen and (max-width:767px) {
+    .portfolio-works {margin-top: 48px;
+    flex-direction: column;  
+    gap: 48px; 
+    align-items: center;}
+}
+@media screen and (min-width:768px) and (max-width:1199px) {
+    .portfolio-works { margin-top: 64px;
+       
+    column-gap: 24px;
+    row-gap: 72px;
+    justify-content: center;    }
+}
+
+@media screen and (min-width:1200px) {
+    .portfolio-works {margin-top: 72px;
+    flex-wrap: wrap;   
+    column-gap: 24px;
+    row-gap: 48px;
+    justify-content: center;
+    }
+}
+
+
 .portf-link {
     text-decoration-line: none;
     display: block;
     color: var(--text);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-    max-width: 396px;
-
+    
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width:479px) {
+    .portf-link { max-width: 396px;}
+}
+@media screen and (min-width:480px) and (max-width:767px){
+    .portf-link {
+        max-width: 356px;    }
+}
+@media screen and (min-width:768px)  {
+    .portf-link {
+        max-width: 360px;    }
 }
 
 .portf-link:hover,
